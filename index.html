@@ -18,18 +18,66 @@
 }
     
     body {
-      background: linear-gradient(to top, #1e1e1e, #0000ff);
-      color: #8c8c8c;
-      font-family: 'Theobi' !important;
-      position: relative;
-      font-weight: bold;
-      padding: 0;
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  background: linear-gradient(to top, #1e1e1e, #0000ff);
+  color: #8c8c8c;
+  font-family: 'Theobi', sans-serif;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* This ensures that the countdown takes at least the full viewport height */
+  text-align: center;
+}
+
+    
+    .developer-section {
+  width: 100%;
+  padding: 50px 0;
+  display: flex; /* This will enable flexbox */
+  justify-content: center; /* This will center the card horizontally */
+  align-items: center; /* This will center the card vertically */
+}
+
+.card {
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  max-width: 600px;
+  margin: auto;
+  /* ... other styles ... */
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-body p {
+  color: rgba(255, 255, 255, 0.8); /* This is white with 80% opacity */
+}
+
+.card-body h2 {
+  color: #ffffff; /* This sets the color to white */
+}
+
+.card-body p1 {
+    color: rgba(255, 255, 255, 0.80);
+}
+
+.card-body p2 {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+h2 {
+  font-size: 2em; /* Adjust size as needed */
+  margin-bottom: 10px;
+}
     .container {
       text-align: center;
     }
@@ -55,11 +103,30 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1><span>Theoretical Software LLC</span></h1>
-    <p><strong>a development by theo mirzakhanian</strong></p>
-    <div id="countdown"></div>
+  <div class="main-content">
+    <div class="container">
+      <h1><span>Theoretical Software LLC</span></h1>
+      <p><strong>a development by theo mirzakhanian</strong></p>
+      <div id="countdown"></div>
+    </div>
   </div>
+
+  <div class="developer-section">
+    <div class="card">
+      <div class="card-body">
+        <h2>Theo Mirzakhanian</h2>
+        <p>Certified Cybersecurity Analyst and Software Developer</p>
+        <p1>Hello. I am Theo Mirzakhanian. I am a Google Certified Cybersecurity Analyst, and a very experienced Software Developer in 10+ languages. </p1>
+        <p2>But this isn't about me, rather this is about Theoretical Software LLC. TSLLC (short for Theoretical Software LLC) was made not only as a fun project to show on my resume, but also as a revolutionary vision for single-dev software development. As somebody with experience with the following:
+        
+        C++, C#, C, Lua, Python, Java, Rust, Assembly, and a little in OpCodes. I can 100% state that giant projects done by one singular developer, is possible. I won't just be focusing on software, but will also include hardware development in my vision.</p2>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  
   <script>
     var countDownDate = new Date("Mar 1, 2024 00:00:00").getTime();
 
@@ -83,5 +150,11 @@
       }
     }, 1000);
   </script>
+  
+  <div class="developer-section">
+  <div class="developer-section">
+  
+</div>
+</div>
 </body>
 </html>
