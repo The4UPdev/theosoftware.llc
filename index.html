@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+
+@font-face {
+    font-family: 'Theobi';
+    src: url('https://www.bidoof.app/theo.ttf') format('truetype');
+}
+      
+      @font-face {
+    font-family: 'Futura';
+    src: url('https://www.bidoof.app/theobi.ttf') format('opentype');
+}
+    
+    body {
+      background: linear-gradient(to top, #1e1e1e, #0000ff);
+      color: #8c8c8c;
+      font-family: 'Theobi' !important;
+      position: relative;
+      font-weight: bold;
+      padding: 0;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      text-align: center;
+    }
+    h1 {
+      font-size: 3em;
+      color: #00bfff;
+      margin: 0;
+      font-family: 'Futura' !important;
+      text-shadow: none;
+    }
+    h1 span {
+      font-style: normal;
+    }
+    p {
+      font-size: 1.2em;
+      color: #0086b3;
+      margin: 10px 0;
+    }
+    #countdown {
+      font-size: 1.5em;
+      color: #00bfff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><span>Cig X</span></h1>
+    <p><strong>Coming Soon | Stay tuned for updates!</strong></p>
+    <div id="countdown"></div>
+  </div>
+  <script>
+    var countDownDate = new Date("Feb 31, 2024 00:00:00").getTime();
+
+    var x = setInterval(function() {
+
+      var now = new Date().getTime();
+
+      var distance = countDownDate - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML = "" + days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "COMING SOON!";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
