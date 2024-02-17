@@ -43,6 +43,31 @@
   align-items: center; /* This will center the card vertically */
 }
 
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px; /* Adjust as needed */
+  font-size: 1em;
+  text-align: center;
+  color: white;
+  background-image: linear-gradient(to right, #6dd5ed, #2193b0); /* Original gradient */
+  border: none; /* No border */
+  border-radius: 20px;
+  text-decoration: none; /* No underline */
+  font-family: 'Theobi', sans-serif;
+  transition: all 0.3s ease; /* Smooth transition for all changes */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+  
+}
+
+.download-button:hover, .download-button:focus {
+  color: white; /* Ensure the text color stays white */
+  background-image: linear-gradient(to right, #5ac5dc, #1f8ca0); /* Darkened gradient */
+  text-decoration: none; /* No underline */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Larger shadow for hover effect */
+  outline: none; /* Removes the outline on focus */
+}
+
 .card {
   background: linear-gradient(to right, #6dd5ed, #2193b0);
   border: none;
@@ -52,6 +77,16 @@
   max-width: 600px;
   margin: auto;
   /* ... other styles ... */
+}
+
+.certified-card {
+  background: linear-gradient(to right, #ffffff, #e6e6e6); /* White to light gray gradient */
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  max-width: 600px;
+  margin: auto;
 }
 
 .card:hover {
@@ -69,6 +104,37 @@
 .card-body p1 {
     color: rgba(255, 255, 255, 0.80);
 }
+
+.certified-card .card-body h2 {
+  color: #575757; /* This sets the color to black */
+}
+
+.certified-logo {
+  max-width: 50%; /* or any other percentage or pixel value you prefer */
+  height: auto; /* maintains the aspect ratio */
+  display: block;
+  margin: 20px auto; /* This centers the image in the card and adds some space above and below it */
+}
+
+.meet-developers-section {
+  text-align: center; /* Centers the content */
+  padding: 20px 0; /* Adds some spacing above and below the section */
+}
+
+.meet-developers-title {
+  display: inline-block; /* Allows inline placement with the arrows */
+  font-size: 2em; /* Adjust the font size as needed */
+  color: #00bfff; /* Text color */
+  margin: 0 10px; /* Gives a little space on the left and right */
+  /* Add any additional styling for the title text here */
+}
+
+.arrow-icon {
+  vertical-align: middle; /* Aligns the arrows with the middle of the text */
+  width: 50px; /* Adjust the width as needed */
+  height: auto; /* Maintains the aspect ratio of the arrow images */
+}
+
 
 .card-body p2 {
     color: rgba(255, 255, 255, 0.95);
@@ -111,6 +177,12 @@ h2 {
     </div>
   </div>
 
+  <div class="meet-developers-section">
+    <img src="images/arrow_blue.png" alt="Arrow pointing down" class="arrow-icon">
+    <h2 class="meet-developers-title">meet the developers</h2>
+    <img src="images/arrow_blue.png" alt="Arrow pointing down" class="arrow-icon">
+  </div>
+
   <div class="developer-section">
     <div class="card">
       <div class="card-body">
@@ -120,6 +192,15 @@ h2 {
         <p2>But this isn't about me, rather this is about Theoretical Software LLC. TSLLC (short for Theoretical Software LLC) was made not only as a fun project to show on my resume, but also as a revolutionary vision for single-dev software development. As somebody with experience with the following:
         
         C++, C#, C, Lua, Python, Java, Rust, Assembly, and a little in OpCodes. I can 100% state that giant projects done by one singular developer, is possible. I won't just be focusing on software, but will also include hardware development in my vision.</p2>
+      </div>
+    </div>
+  </div>
+
+  <div class="card certified-card">
+    <div class="card-body">
+      <h2>Certified By</h2>
+        <img src="images/google.png" alt="Google Certification" class="certified-logo">
+        <a href="files/google_cert.pdf" class="download-button" download="google_cert.pdf">View Certificate</a>
       </div>
     </div>
   </div>
